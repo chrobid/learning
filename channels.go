@@ -9,7 +9,7 @@ func sum(nums []int, c chan int) {
 }
 
 func gen() int {
-	return 5
+	return
 }
 
 func main() {
