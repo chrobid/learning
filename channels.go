@@ -23,6 +23,7 @@ func gen(c chan []int) {
 
 	for i := 0; i < listLength; i++ {
 		num = append(num, rand.Intn(999999)) // generate random number here
+		fmt.Println(i)
 	}
 	c <- num
 }
@@ -42,11 +43,3 @@ func main() {
 	fmt.Println(num4)
 	fmt.Println(num5)
 }
-
-// do we send the entire slice to the gen function, and then
-// send that back to the channel? or do we send the individual
-// values for each element in the slice to the channel, and
-// then dump it from the channel into the slice?
-//
-// kk first it's not a slice it's an array and second we send the whole array
-// back but don't have to send it there to begin with
